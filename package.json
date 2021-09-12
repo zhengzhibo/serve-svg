@@ -1,0 +1,39 @@
+{
+  "name": "serve-svg",
+  "version": "0.0.2-beta0",
+  "description": "serve all svg files for preview in browser",
+  "bin": "cli.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=production nodemon cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhengzhibo/serve-svg.git"
+  },
+  "keywords": [
+    "cli-app",
+    "svg",
+    "cli",
+    "preview"
+  ],
+  "author": {
+    "name": "Zheng Zhibo",
+    "email": "zhibo90@gmail.com",
+    "url": "https://zb.fyi"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zhengzhibo/serve-svg/issues"
+  },
+  "homepage": "https://github.com/zhengzhibo/serve-svg#readme",
+  "dependencies": {
+    "glob": "^7.1.7",
+    "koa": "^2.13.1",
+    "koa-static": "^5.0.0",
+    "mustache": "^4.2.0",
+    "open": "^8.2.1"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
+  }
+}

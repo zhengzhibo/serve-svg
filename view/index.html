@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>serve-svg - {{path}}</title>
+    <style>
+      .svg-li {
+        font-size: 128px;
+        display: inline-block;
+        padding: 2px;
+        margin: 4px;
+      }
+      .svg-img {
+        cursor: pointer;
+        height: 1em;
+        width: 1em;
+        margin: 0 0.05em 0 0.1em;
+        vertical-align: -0.1em;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="svg-list">
+      {{#files}}
+          <li class="svg-li"><img draggable="false" class="svg-img" src="{{.}}" /></li>
+      {{/files}}
+    </ul>
+  </body>
+  <script>
+    document.body.addEventListener('click', function(e) {
+      if (e.target.tagName === 'IMG') {
+        document.location.href = e.target.src;
+      }
+    })
+  </script>
+</html>
