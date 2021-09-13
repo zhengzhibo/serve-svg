@@ -1,6 +1,6 @@
 {
   "name": "serve-svg",
-  "version": "0.0.2-beta0",
+  "version": "0.0.2-beta1",
   "description": "serve all svg files for preview in browser",
   "bin": "cli.js",
   "scripts": {

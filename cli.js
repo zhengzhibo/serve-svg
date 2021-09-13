@@ -1,8 +1,9 @@
 #!/usr/bin/env node
 
-const Koa = require('koa');
 const fs = require('fs');
-const Mustache = require('mustache')
+const path = require('path');
+const Koa = require('koa');
+const Mustache = require('mustache');
 
 const open = require('open');
 const glob = require('glob');
@@ -28,14 +29,14 @@ app.use(async (ctx) => {
   const files = await getSvgFiles();
   const path = process.cwd();
 
-  const template = render('index', {files, path})
+  const template = render('index', { files, path });
 
   ctx.body = template;
 });
 
-function render (pathname, data) {
-  const template = fs.readFileSync('./view/' + pathname + '.html', 'utf-8');
-  return Mustache.render(template, data)
+function render(pathname, data) {
+  const template = fs.readFileSync(path.join(__dirname, './view/', pathname + '.html'), 'utf-8');
+  return Mustache.render(template, data);
 }
 
 app.listen(3000);
