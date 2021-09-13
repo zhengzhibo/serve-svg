@@ -1,6 +1,6 @@
 {
   "name": "serve-svg",
-  "version": "0.0.2-beta1",
+  "version": "0.0.2-beta2",
   "description": "serve all svg files for preview in browser",
   "bin": "cli.js",
   "scripts": {
@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/zhengzhibo/serve-svg#readme",
   "dependencies": {
+    "commander": "^8.2.0",
     "glob": "^7.1.7",
     "koa": "^2.13.1",
     "koa-static": "^5.0.0",
