@@ -16,6 +16,10 @@
     "cli",
     "preview"
   ],
+  "nodemonConfig": {
+    "ignore": ["node_modules/*"],
+    "ext": "*.html,*.js,*.json"
+  },
   "author": {
     "name": "Zheng Zhibo",
     "email": "zhibo90@gmail.com",
